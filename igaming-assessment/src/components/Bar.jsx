@@ -31,9 +31,11 @@ function Bar(props) {
       }
       return value
     })
-    console.log("tempArr", tempArr)
-    
     setChips([...tempArr, ...[item]])
+  }
+
+  const removeChip=(text)=>{
+    setChips([...chips.filter((value)=>value.text != text)])
   }
 
   return (
@@ -61,11 +63,13 @@ function Bar(props) {
             return <RemovableChip
               key={value.text}
               {...value}
+              removeChip={removeChip}
             />
           } else if (value.type === chip_type.category) {
             return <RemovableChip
               key={value.text}
               {...value}
+              removeChip={removeChip}
             />
           }
 

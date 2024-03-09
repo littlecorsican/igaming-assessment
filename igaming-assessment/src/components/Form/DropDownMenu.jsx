@@ -16,7 +16,6 @@ function DropDownMenu({ list, handleClick }) {
         }))
     },[search])
     
-
   return (
     <>
         <div>

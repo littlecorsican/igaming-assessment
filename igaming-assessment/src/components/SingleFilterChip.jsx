@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import formStyles from'../styles/Form.module.css'
 import chipStyles from'../styles/Chips.module.css'
 
-function SingleFilterChip({ text, type, img, list, addItemToBar }) {
+function SingleFilterChip({ text, icon, type, list, addItemToBar }) {
 
     const [showMenu, setShowMenu] = useState(false)
     const [selected, setSelected] = useState(false)
@@ -18,11 +18,17 @@ function SingleFilterChip({ text, type, img, list, addItemToBar }) {
         console.log(e)
         addItemToBar(e, true)
     }
+
+    const DynamicIcon=(Icon)=>{
+        return icon
+    }
     //className={`${styles.description} ${styles.yellow}`}
     return (
         <div className={chipStyles.chips}>
             <button className={`flex flex-row rounded-[15px] mx-2 px-2 my-1 py-1 border cursor-pointer hover:text-indigo-800 ${selected ? "text-indigo-800 border-indigo-800" : "" }`} onClick={handleClick}>
-                {img && <img src={img} alt="" className={chipStyles.icon} />}
+                <div className={chipStyles.icon}>
+                    <DynamicIcon />
+                </div>
                 {text}
             </button>
             {showMenu && <menu className={formStyles.menu}>

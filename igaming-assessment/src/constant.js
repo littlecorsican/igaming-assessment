@@ -1,3 +1,7 @@
+import { TfiExchangeVertical } from "react-icons/tfi";
+import { PiMonitorBold } from "react-icons/pi";
+import { FaPlus } from "react-icons/fa";
+
 export const chip_type = {
     textOnly: "text-only",
     singleFilter: "single-filter",
@@ -53,23 +57,23 @@ export const chips = [
     { 
         text: "Extract Data",
         type: chip_type.textOnly,
-        img: "./images/download.png",
+        icon: <TfiExchangeVertical />
     },
     { 
         text: "Monitoring",
         type: chip_type.textOnly,
-        img: "/images/monitor.png",
+        icon: <PiMonitorBold />
     },
     {
         text: "Filter by Site",
         type: chip_type.singleFilter,
-        img: "/images/plus.png",
+        icon: <FaPlus />,
         list: filterBySite
     },
     {
         text: "Filter by Category",
         type: chip_type.multiFilter,
-        img: "/images/plus.png",
+        icon: <FaPlus />,
         list: filterByCategory
     },
 ]
