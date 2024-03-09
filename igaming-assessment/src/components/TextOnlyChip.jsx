@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react'
 import chipStyles from'../styles/Chips.module.css'
-import { FaBeer } from 'react-icons/fa';
 
 function TextOnlyChip({ text, icon, selected, updateSelected }) {
 

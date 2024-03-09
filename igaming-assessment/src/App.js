@@ -13,11 +13,11 @@ function App() {
 
   const addItemToBar=(item, singleSelect=false)=>{
     //if already pushed, exit
-    if (chips.find((value)=>value.text == item.text)) return
+    if (chips.find((value)=>value.text === item.text)) return
 
     const tempArr = chips.filter((value)=>{
       if (singleSelect) {
-        return value.type != item.type
+        return value.type !== item.type
       }
       return value
     })
@@ -25,7 +25,7 @@ function App() {
   }
 
   const removeChip=(text)=>{
-    setChips([...chips.filter((value)=>value.text != text)])
+    setChips([...chips.filter((value)=>value.text !== text)])
   }
 
   const updateSelected=(text)=>{

@@ -1,6 +1,6 @@
 TO DO 
 
-- add animation 
+
 - lint
 - add unit test
 - add automation test
@@ -13,3 +13,4 @@ CAN BE IMPROVED
 DONE
 - add outer div with padding - done
 - add images - partially
+- add animation 

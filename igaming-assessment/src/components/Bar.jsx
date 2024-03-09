@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react'
-import Chip from './Chip'
 import TextOnlyChip from './TextOnlyChip'
 import SingleFilterChip from './SingleFilterChip'
 import MultiFilterChip from './MultiFilterChip'

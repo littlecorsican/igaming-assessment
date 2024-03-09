@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import chipStyles from'../styles/Chips.module.css'
 import { RxCross1 } from "react-icons/rx";
 
