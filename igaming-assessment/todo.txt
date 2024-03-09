@@ -1,0 +1,9 @@
+TO DO 
+
+- add images
+- add animation
+- lint
+- add responsiveness
+- add outer div with padding
+- add unit test
+- add automation test

@@ -1,0 +1,30 @@
+input[type="text"] {
+    border-radius: 4px;
+    height: 39px;
+    padding: 4px;
+    border: 1px solid black;
+}
+
+.menu {
+    position: absolute;
+    /* inset: 0px auto auto 0px; */
+    transform: translate(0px, 10px);
+    z-index: 2;
+    background: #fff;
+
+}
+
+.menuItem {
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #D7D7D7;
+    cursor:pointer
+}
+
+.menuItem:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.menuItem:hover {
+    background-color: aliceblue;
+}

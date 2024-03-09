@@ -31,13 +31,14 @@ function App() {
           See all
         </div>
       </div>
-      <div className="">
+      <div className="w-full">
         <Bar chips={chips} />
       </div>
-      <div className="w-full">
+      <div className="w-full text-left">
         {
           cards.length > 0 && cards.map((value)=>{
             return <Card 
+              key={value.id}
               {...value}
             />
           })
