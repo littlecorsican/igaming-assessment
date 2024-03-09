@@ -9,7 +9,6 @@ import barStyles from '../styles/Bar.module.css'
 
 function Bar(props) {
 
-  const [selectedChips, setSelectedChips] = useState(props.chips)
   const [chips, setChips] = useState(props.chips)
 
   const addItemToBar=(item, singleSelect=false)=>{
@@ -29,13 +28,13 @@ function Bar(props) {
     setChips([...chips.filter((value)=>value.text != text)])
   }
 
-  const log=()=>{
+  useEffect(()=>{
     console.log(chips)
-  }
+  }, [chips])
+
 
   return (
     <div className={barStyles.bar}>
-      <button onClick={log}>sdfa</button>
       {
         chips.length > 0 && chips.map((value)=>{
           if (value.type === chip_type.textOnly) {

@@ -2,7 +2,8 @@ input[type="text"] {
     border-radius: 4px;
     height: 39px;
     padding: 4px;
-    border: 1px solid black;
+    margin: 10px 16px;
+    border: 1px solid #D7D7D7;
 }
 
 .menu {
@@ -16,7 +17,7 @@ input[type="text"] {
 
 .menuItem {
     margin: 5px;
-    padding: 5px;
+    padding: 12px;
     border-bottom: 1px solid #D7D7D7;
     cursor:pointer
 }
@@ -27,4 +28,8 @@ input[type="text"] {
 
 .menuItem:hover {
     background-color: aliceblue;
+}
+
+.dropDownMenu {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

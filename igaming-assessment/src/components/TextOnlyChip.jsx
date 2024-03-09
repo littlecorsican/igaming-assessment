@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import chipStyles from'../styles/Chips.module.css'
 import { FaBeer } from 'react-icons/fa';
 
-function TextOnlyChip({ text, icon }) {
+function TextOnlyChip({ text, type, icon }) {
 
     const [selected, setSelected] = useState(false)
 

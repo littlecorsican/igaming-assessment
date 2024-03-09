@@ -17,10 +17,10 @@ function DropDownMenu({ list, handleClick }) {
     },[search])
     
   return (
-    <>
-        <div>
+    <div className={formStyles.dropDownMenu}>
+        <>
             <input type="text" className={formStyles.input} placeholder="Search" onChange={updateSearch} />
-        </div>
+        </>
         {
             filteredList.length > 0 && filteredList.map((value)=>{
                 return <div className={formStyles.menuItem} key={value.text} onClick={()=>handleClick(value)}>
@@ -28,7 +28,7 @@ function DropDownMenu({ list, handleClick }) {
                 </div>
             })
         }
-    </>
+    </div>
     );
   }
   

@@ -7,7 +7,6 @@ import chipStyles from'../styles/Chips.module.css'
 function MultiFilterChip({ text, type, icon, list, addItemToBar }) {
 
     const [showMenu, setShowMenu] = useState(false)
-    const [selected, setSelected] = useState(false)
 
     const handleClick=()=>{
         setShowMenu((showMenu)=>!showMenu)
