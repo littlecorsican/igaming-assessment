@@ -8,3 +8,24 @@
     position: relative;
     white-space: nowrap;
 }
+
+.chipBtn {
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    margin: 0.5rem 0.5rem;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid gray;
+    color: gray;
+}
+
+.selected {
+    color: indigo;
+    border: 1px solid indigo;
+    background-color: #FCF5FF
+}
+
+.chipBtn:hover {
+    color: indigo;
+    border: 1px solid indigo;
+}
