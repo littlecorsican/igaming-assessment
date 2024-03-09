@@ -3,16 +3,17 @@ export const chip_type = {
     singleFilter: "single-filter",
     multiFilter: "multi-filter",
     site: "site",
+    category: "category",
 }
 
-export const filterBySite = [
-    "Product Hunt",
-    "Indeed",
-    "Linkedin",
-    "Eventbrite"
-]
+// export const filterBySite = [
+//     "Product Hunt",
+//     "Indeed",
+//     "Linkedin",
+//     "Eventbrite"
+// ]
 
-export const filterBySite2 = [
+export const filterBySite = [
     {
         text: "Product Hunt",
         type: chip_type.site
@@ -32,9 +33,20 @@ export const filterBySite2 = [
 ]
 
 export const filterByCategory = [
-    "SEO",
-    "Competitive Intelligence"
+    {
+        text: "SEO",
+        type: chip_type.category,
+    },
+    {
+        text: "Competitive Intelligence",
+        type: chip_type.category
+    },
 ]
+
+// export const filterByCategory = [
+//     "SEO",
+//     "Competitive Intelligence"
+// ]
 
 
 export const chips = [

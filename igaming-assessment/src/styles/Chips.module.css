@@ -6,4 +6,5 @@
 
 .chips {
     position: relative;
+    white-space: nowrap;
 }

@@ -12,7 +12,7 @@ function DropDownMenu({ list, handleClick }) {
 
     useEffect(()=>{
         setFilteredList(list.filter((value)=>{
-            return value.toLowerCase().indexOf(search.toLowerCase()) > -1
+            return value.text.toLowerCase().indexOf(search.toLowerCase()) > -1
         }))
     },[search])
     
@@ -24,8 +24,8 @@ function DropDownMenu({ list, handleClick }) {
         </div>
         {
             filteredList.length > 0 && filteredList.map((value)=>{
-                return <div className={formStyles.menuItem} key={value} onClick={()=>handleClick(value)}>
-                    {value}
+                return <div className={formStyles.menuItem} key={value.text} onClick={()=>handleClick(value)}>
+                    {value.text}
                 </div>
             })
         }

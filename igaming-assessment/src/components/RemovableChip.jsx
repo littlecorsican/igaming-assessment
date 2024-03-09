@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import chipStyles from'../styles/Chips.module.css'
 
-function TextOnlyChip({ text, type, img }) {
+function RemovableChip({ text }) {
 
     const [selected, setSelected] = useState(false)
 
@@ -12,12 +12,12 @@ function TextOnlyChip({ text, type, img }) {
     return (
         <div className={chipStyles.chips}>
             <button className={`flex flex-row rounded-[15px] mx-2 px-2 py-1 my-1 border cursor-pointer hover:text-indigo-800 ${selected ? "text-indigo-800 border-indigo-800" : "" }`} onClick={handleClick}>
-                {img && <img src={img} alt="" className={chipStyles.icon} />}
                 {text}
+                <img src="./images/cancel.png" alt="" className={chipStyles.icon} />
             </button>
         </div>
     );
 }
   
-export default TextOnlyChip;
+export default RemovableChip;
   

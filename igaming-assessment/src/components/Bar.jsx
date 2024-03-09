@@ -3,6 +3,7 @@ import Chip from './Chip'
 import TextOnlyChip from './TextOnlyChip'
 import SingleFilterChip from './SingleFilterChip'
 import MultiFilterChip from './MultiFilterChip'
+import RemovableChip from './RemovableChip'
 import { chip_type, filterBySite, filterByCategory } from '../constant'
 import barStyles from '../styles/Bar.module.css'
 
@@ -20,12 +21,19 @@ function Bar(props) {
   //   setSelectedChips([...tempArr]);
   // }
 
-  const addItemToBar=(text)=>{
-    const tempVar = [{
-      text: text,
-      type: "text-only"
-    }]
-    setChips((chips)=>[...chips, ...tempVar])
+  const addItemToBar=(item, singleSelect=false)=>{
+    //if already pushed, exit
+    if (chips.find((value)=>value.text == item.text)) return
+
+    const tempArr = chips.filter((value)=>{
+      if (singleSelect) {
+        return value.type != item.type
+      }
+      return value
+    })
+    console.log("tempArr", tempArr)
+    
+    setChips([...tempArr, ...[item]])
   }
 
   return (
@@ -45,6 +53,17 @@ function Bar(props) {
             />
           } else if (value.type === chip_type.multiFilter) {
             return <MultiFilterChip
+              key={value.text}
+              {...value}
+              addItemToBar={addItemToBar}
+            />
+          } else if (value.type === chip_type.site) {
+            return <RemovableChip
+              key={value.text}
+              {...value}
+            />
+          } else if (value.type === chip_type.category) {
+            return <RemovableChip
               key={value.text}
               {...value}
             />
