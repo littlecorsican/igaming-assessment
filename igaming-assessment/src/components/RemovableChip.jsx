@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react'
 import chipStyles from'../styles/Chips.module.css'
-import { MdOutlineCancel } from "react-icons/md";
+import { RxCross1 } from "react-icons/rx";
 
 function RemovableChip({ text, removeChip }) {
 
 
     return (
         <div className={chipStyles.chips}>
-            <button className={`flex flex-row rounded-[15px] mx-2 px-2 py-1 my-1 border cursor-pointer hover:text-indigo-800`}>
+            <button className={`${chipStyles.chipBtn} ${chipStyles.selected}`}>
                 {text}
                 <div className={chipStyles.icon} onClick={()=>removeChip(text)}>
-                    <MdOutlineCancel />
+                    <RxCross1 />
                 </div>
             </button>
         </div>

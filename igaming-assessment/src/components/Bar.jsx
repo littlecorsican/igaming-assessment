@@ -11,15 +11,6 @@ function Bar(props) {
 
   const [selectedChips, setSelectedChips] = useState(props.chips)
   const [chips, setChips] = useState(props.chips)
-  // console.log("selectedChips", selectedChips) 
-
-  // const handleClick=(selected)=>{
-  //   const tempArr = selectedChips
-  //   const tempSelected = tempArr.find((value)=>selected.text === value.text).selected
-  //   tempArr.find((value)=>selected.text === value.text).selected = !tempSelected
-  //   console.log(tempArr)
-  //   setSelectedChips([...tempArr]);
-  // }
 
   const addItemToBar=(item, singleSelect=false)=>{
     //if already pushed, exit
@@ -38,8 +29,13 @@ function Bar(props) {
     setChips([...chips.filter((value)=>value.text != text)])
   }
 
+  const log=()=>{
+    console.log(chips)
+  }
+
   return (
     <div className={barStyles.bar}>
+      <button onClick={log}>sdfa</button>
       {
         chips.length > 0 && chips.map((value)=>{
           if (value.type === chip_type.textOnly) {
