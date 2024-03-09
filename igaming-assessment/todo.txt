@@ -1,7 +1,7 @@
 TO DO 
 
-
-- lint
+- add debounce on input
+- css variable
 - add unit test
 - add automation test
 
