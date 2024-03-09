@@ -1,9 +1,15 @@
 TO DO 
 
-- add images
-- add animation
+- add animation 
 - lint
-- add responsiveness
-- add outer div with padding
 - add unit test
 - add automation test
+
+
+CAN BE IMPROVED
+- add responsiveness - partially
+
+
+DONE
+- add outer div with padding - done
+- add images - partially

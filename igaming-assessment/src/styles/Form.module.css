@@ -32,4 +32,7 @@ input[type="text"] {
 
 .dropDownMenu {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }

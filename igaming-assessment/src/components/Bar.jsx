@@ -7,30 +7,16 @@ import RemovableChip from './RemovableChip'
 import { chip_type, filterBySite, filterByCategory } from '../constant'
 import barStyles from '../styles/Bar.module.css'
 
-function Bar(props) {
+function Bar({ chips, addItemToBar, removeChip }) {
 
-  const [chips, setChips] = useState(props.chips)
+  //const [chips, setChips] = useState(props.chips)
 
-  const addItemToBar=(item, singleSelect=false)=>{
-    //if already pushed, exit
-    if (chips.find((value)=>value.text == item.text)) return
-
-    const tempArr = chips.filter((value)=>{
-      if (singleSelect) {
-        return value.type != item.type
-      }
-      return value
-    })
-    setChips([...tempArr, ...[item]])
-  }
-
-  const removeChip=(text)=>{
-    setChips([...chips.filter((value)=>value.text != text)])
-  }
-
-  useEffect(()=>{
-    console.log(chips)
-  }, [chips])
+  // useEffect(()=>{
+  //   console.log(chips)
+  //   chips.map((value)=>{
+  //     if ()
+  //   })
+  // }, [chips])
 
 
   return (
