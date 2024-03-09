@@ -5,11 +5,11 @@ import Bar from './components/Bar'
 import { default_chips } from './constant'
 import data from './Assessment_1_2.json'
 import appStyles from'./styles/App.module.css'
+import { chip_type } from './constant'
 
 function App() {
-  console.log("data", data, data.data)
-  const [cards, setCards] = useState([...data.data.oneClickAutomations.items])
   const [chips, setChips] = useState(default_chips)
+  const [cards, setCards] = useState([...data.data.oneClickAutomations.items])
 
   const addItemToBar=(item, singleSelect=false)=>{
     //if already pushed, exit
@@ -28,20 +28,33 @@ function App() {
     setChips([...chips.filter((value)=>value.text != text)])
   }
 
-  const filterCards=(filter)=>{
-    const newCards = data.data.oneClickAutomations.items.filter((value) => {
-      return value.category === filter;
-    });
-    setCards(newCards);
+  const updateSelected=(text)=>{
+    const newChips = chips.map((value)=>{
+      if (value.text === text) {
+        value.selected = !value.selected
+      }
+      return value
+    })
+    setChips(newChips)
   }
   
+  const seeAll=()=>{
+    setCards([...data.data.oneClickAutomations.items])
+  }
 
   useEffect(()=>{
-    console.log("chips", chips)
-    const newCards = data.data.oneClickAutomations.items.filter((value) => {
-      return 
+    const newCards = data.data.oneClickAutomations.items.filter((card_value) => {
+      for(let i=0; i < chips.length; i++) {
+        if (chips[i]?.type === chip_type.category && card_value?.categories.find((category)=>category?.slug === chips[i].slug)) {
+          return card_value
+        } else if (chips[i]?.type === chip_type.site && card_value?.sites.find((site)=>site?.slug === chips[i].slug)) {
+          return card_value
+        } else if (chips[i]?.type === chip_type.textOnly && chips[i]?.selected && card_value?.slug.indexOf(chips[i]?.slug) > -1) {
+          return card_value
+        }
+      }
     });
-    console.log("newCards", newCards)
+    setCards(newCards)
   },[chips])
 
   return (
@@ -50,13 +63,14 @@ function App() {
         <div>
           Here are some Automations that pre-defined for product availability monitoring
         </div>
-        <div className='text-indigo-800'>
+        <div className={appStyles.seeAll} onClick={seeAll}>
           See all
         </div>
       </div>
       <div className={appStyles.bar}>
         <Bar 
-          chips={chips} 
+          chips={chips}
+          updateSelected={updateSelected}
           addItemToBar={addItemToBar}
           removeChip={removeChip}
         />

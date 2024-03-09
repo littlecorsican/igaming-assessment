@@ -7,6 +7,7 @@
           "title": "Monitor Company Info on LinkedIn",
           "shortDescription": "Monitor a company's details on LinkedIn and get an alert when their details or employees list change.",
           "slug": "monitor-linkedin-company",
+          "image_path": "./images/linkedin.png",
           "priority": 10,
           "categories": [
             {
@@ -28,6 +29,7 @@
           "title": "Extract Products from Product Hunt",
           "shortDescription": "Scrape the list of products on ProductHunt for a specific keyword and/or category. Download it as a spreadsheet or monitor it for changes over time.",
           "slug": "scrape-producthunt-search-results",
+          "image_path": "./images/linkedin.png",
           "priority": 10,
           "categories": [
             {
@@ -50,6 +52,7 @@
           "shortDescription": "Extract Google search results (organic and paid) for a keyword. Download them as a spreadsheet.",
           "slug": "scrape-google-search-results",
           "priority": 1,
+          "image_path": "./images/linkedin.png",
           "categories": [
             {
               "title": "Competitive Intelligence",
@@ -71,6 +74,7 @@
           "title": "Find a person's social media profile links",
           "shortDescription": "Enter a person's name and get a list of links to all their social media profiles.",
           "slug": "find-person-social-media-profiles",
+          "image_path": "./images/linkedin.png",
           "priority": 1,
           "categories": [],
           "sites": [
@@ -87,6 +91,7 @@
           "title": "Monitor Amazon US search ads",
           "shortDescription": "Monitor Amazon US paid search results for specific keywords and filters.",
           "slug": "monitor-amazon-us-search-ads",
+          "image_path": "./images/amazon.png",
           "priority": 1,
           "categories": [
             {
@@ -108,6 +113,7 @@
           "title": "Monitor Amazon US search results",
           "shortDescription": "Monitor Amazon US organic and paid search results for specific keywords and filters.",
           "slug": "monitor-amazon-us-search-results",
+          "image_path": "./images/amazon.png",
           "priority": 1,
           "categories": [
             {
@@ -129,6 +135,7 @@
           "title": "Monitor hotel data, reviews, listings and prices on Booking.com",
           "shortDescription": "Monitor Booking.com search results and get a notification when listings, reviews, or prices change.",
           "slug": "monitor-booking-com-hotel-listings-reviews-prices",
+          "image_path": "./images/linkedin.png",
           "priority": 1,
           "categories": [
             {
@@ -150,6 +157,7 @@
           "title": "Monitor FDA approval status for drug",
           "shortDescription": "Monitor a new drug/vaccine's FDA approval status and get an email notifications as soon as the status is updated.",
           "slug": "monitor-fda-approval-status-drug",
+          "image_path": "./images/linkedin.png",
           "priority": 1,
           "categories": [],
           "sites": [
@@ -166,6 +174,7 @@
           "title": "Monitor Google Maps search results",
           "shortDescription": "Monitor Google Maps search results and get a notification when any places are added, removed, or changed/renamed.",
           "slug": "monitor-google-maps-search-results",
+          "image_path": "./images/google.jpg",
           "priority": 1,
           "categories": [
             {
@@ -209,6 +218,7 @@
           "title": "Monitor Google places information",
           "shortDescription": "Monitor a Google place and get a notification when there is a new review, photo, or any profile change.",
           "slug": "monitor-google-place-reviews-photos-popular-times",
+          "image_path": "./images/linkedin.png",
           "priority": 1,
           "categories": [
             {
@@ -230,6 +240,7 @@
           "title": "Monitor paid Google search results",
           "shortDescription": "Monitor ads shown for a keyword on Google.",
           "slug": "monitor-google-search-ads",
+          "image_path": "./images/amazon.png",
           "priority": 1,
           "categories": [
             {
@@ -252,6 +263,7 @@
           "title": "Monitor Pinterest profile info",
           "shortDescription": "Monitor all the info on a Pinterest profile and get a notification when they change.",
           "slug": "monitor-pinterest-profile",
+          "image_path": "./images/amazon.png",
           "priority": 1,
           "categories": [],
           "sites": [
@@ -268,6 +280,7 @@
           "title": "Monitor hotels and restaurants details on TripAdvisor",
           "shortDescription": "Monitor hotels and restaurants on TripAdvisor and get a notification when there are new reviews or changes on their profile.",
           "slug": "monitor-tripadvisor-hotel-restaurant",
+          "image_path": "./images/google.jpg",
           "priority": 1,
           "categories": [
             {
@@ -289,6 +302,7 @@
           "title": "Monitor Tweets with Advanced Filters",
           "shortDescription": "Monitor new tweets with specific criteria (keywords, location, likes, retweets, author, mentions, and more). Get a notification when a new tweet is posted.",
           "slug": "monitor-twitter-search-results",
+          "image_path": "./images/google.jpg",
           "priority": 1,
           "categories": [
             {
@@ -311,6 +325,7 @@
           "shortDescription": "Get an email notification when new jobs with specific criteria are posted on Upwork.",
           "slug": "monitor-upwork-job-postings",
           "priority": 1,
+          "image_path": "./images/amazon.png",
           "categories": [],
           "sites": [
             {
@@ -327,6 +342,7 @@
           "shortDescription": "Extract Amazon US paid search results for specific keywords and filters. Download them as a spreadsheet or send them to your software via webhooks.",
           "slug": "scrape-amazon-us-search-ads",
           "priority": 1,
+          "image_path": "./images/amazon.png",
           "categories": [
             {
               "title": "Competitive Intelligence",
@@ -347,6 +363,7 @@
           "title": "Extract Amazon US search results",
           "shortDescription": "Extract Amazon US organic and paid search results for specific keywords and filters. Download them as a spreadsheet.",
           "slug": "scrape-amazon-us-search-results",
+          "image_path": "./images/amazon.png",
           "priority": 1,
           "categories": [
             {
@@ -368,6 +385,7 @@
           "title": "Extract hotel data, reviews, listings and prices from Booking.com",
           "shortDescription": "Extract Booking.com search results and download them as a spreadsheet.",
           "slug": "scrape-booking-com-hotel-listings-reviews-prices",
+          "image_path": "./images/amazon.png",
           "priority": 1,
           "categories": [
             {
@@ -389,6 +407,7 @@
           "title": "Extract Craigslist post info",
           "shortDescription": "Extract every information out of a Craiglist page, email included.",
           "slug": "scrape-craigslist-post",
+          "image_path": "./images/amazon.png",
           "priority": 1,
           "categories": [],
           "sites": [
@@ -405,6 +424,7 @@
           "title": "Extract Google Maps search results",
           "shortDescription": "Scrape Google Maps and extract all the available data about every place found for a search query. You can download the list as a spreadsheet.",
           "slug": "scrape-google-maps-search-results",
+          "image_path": "./images/google.jpg",
           "priority": 1,
           "categories": [
             {
@@ -426,6 +446,7 @@
           "title": "Extract Google places information not available in the official API",
           "shortDescription": "Scrape a Google place's details including reviews, popular times, photos, and more.",
           "slug": "scrape-google-place-reviews-photos-popular-times",
+          "image_path": "./images/google.jpg",
           "priority": 1,
           "categories": [
             {
@@ -447,6 +468,7 @@
           "title": "Extract paid Google search results",
           "shortDescription": "Extract all ads' details for multiple keywords on Google.",
           "slug": "scrape-google-search-ads",
+          "image_path": "./images/google.jpg",
           "priority": 1,
           "categories": [
             {
@@ -469,6 +491,7 @@
           "title": "Scrape company info on LinkedIn",
           "shortDescription": "Starting from a list of companies, find all their information on LinkedIn and download them as a spreadsheet.",
           "slug": "scrape-linkedin-company",
+          "image_path": "./images/linkedin.png",
           "priority": 1,
           "categories": [
             {
@@ -490,6 +513,7 @@
           "title": "Extract LinkedIn job details",
           "shortDescription": "Scrape LinkedIn job pages and download the data to a spreadsheet.",
           "slug": "scrape-linkedin-job",
+          "image_path": "./images/linkedin.png",
           "priority": 1,
           "categories": [],
           "sites": [
@@ -506,6 +530,7 @@
           "title": "Search Meetup for events near a location",
           "shortDescription": "Meetup does not have a location-based API. This automation lets you scrape Meetup for events near a location.",
           "slug": "scrape-meetup-events-near-location",
+          "image_path": "./images/linkedin.png",
           "priority": 1,
           "categories": [],
           "sites": [
@@ -522,6 +547,7 @@
           "title": "Extract Pinterest profile info",
           "shortDescription": "Extract all the info on a Pinterest profile.",
           "slug": "scrape-pinterest-profile",
+          "image_path": "./images/linkedin.png",
           "priority": 1,
           "categories": [],
           "sites": [

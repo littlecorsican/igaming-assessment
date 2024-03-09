@@ -1,0 +1,20 @@
+.card { 
+    border-radius: 6px;
+    display: inline-block;
+    width: 18rem;
+    margin: 1.5rem;
+    padding: 1rem;
+    text-align: left;
+    height: 15rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #FCF5FF;
+}
+
+.image {
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    border: 1px solid #FCF5FF;
+    border-radius: 4px;
+}

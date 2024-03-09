@@ -14,7 +14,6 @@ function SingleFilterChip({ text, icon, type, list, addItemToBar }) {
 
     const handlePick=(e)=>{
         setShowMenu(false)
-        console.log(e)
         addItemToBar(e, true)
     }
 

@@ -2,23 +2,25 @@ import { useState, useEffect } from 'react'
 import chipStyles from'../styles/Chips.module.css'
 import { FaBeer } from 'react-icons/fa';
 
-function TextOnlyChip({ text, type, icon }) {
+function TextOnlyChip({ text, icon, selected, updateSelected }) {
 
-    const [selected, setSelected] = useState(false)
+    // const [selected, setSelected] = useState(false)
 
-    const handleClick=()=>{
-        setSelected((selected)=>!selected)
-    }
+    // const handleClick=()=>{
+    //     setSelected((selected)=>!selected)
+    // }
 
-    const DynamicIcon=(Icon)=>{
+    // useEffect(()=>{
+    //     updateSelected(selected)
+    // },[selected])
+
+    const DynamicIcon=()=>{
         return icon
     }
 
-    const Icon = icon;
-
     return (
         <div className={chipStyles.chips}>
-            <button className={`${chipStyles.chipBtn} ${selected && chipStyles.selected}`} onClick={handleClick}>
+            <button className={`${chipStyles.chipBtn} ${selected && chipStyles.selected}`} onClick={()=>updateSelected(text)}>
                 {/* {img && <img src={img} alt="" className={chipStyles.icon} />} */}
                 <div className={chipStyles.icon}>
                     <DynamicIcon />

@@ -14,7 +14,6 @@ function MultiFilterChip({ text, type, icon, list, addItemToBar }) {
 
     const handlePick=(e)=>{
         setShowMenu(false)
-        console.log(e)
         addItemToBar(e)
     }
 

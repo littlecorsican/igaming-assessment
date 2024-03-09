@@ -4,20 +4,10 @@ import TextOnlyChip from './TextOnlyChip'
 import SingleFilterChip from './SingleFilterChip'
 import MultiFilterChip from './MultiFilterChip'
 import RemovableChip from './RemovableChip'
-import { chip_type, filterBySite, filterByCategory } from '../constant'
+import { chip_type } from '../constant'
 import barStyles from '../styles/Bar.module.css'
 
-function Bar({ chips, addItemToBar, removeChip }) {
-
-  //const [chips, setChips] = useState(props.chips)
-
-  // useEffect(()=>{
-  //   console.log(chips)
-  //   chips.map((value)=>{
-  //     if ()
-  //   })
-  // }, [chips])
-
+function Bar({ chips, addItemToBar, removeChip, updateSelected }) {
 
   return (
     <div className={barStyles.bar}>
@@ -26,6 +16,7 @@ function Bar({ chips, addItemToBar, removeChip }) {
           if (value.type === chip_type.textOnly) {
             return <TextOnlyChip
               key={value.text}
+              updateSelected={updateSelected}
               {...value}
             />
           } else if (value.type === chip_type.singleFilter) {

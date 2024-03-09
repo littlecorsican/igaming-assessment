@@ -13,26 +13,32 @@ export const chip_type = {
 export const filterBySite = [
     {
         text: "Product Hunt",
+        slug: "producthunt",
         type: chip_type.site,
     },
     {
         text: "Indeed",
+        slug: "indeed",
         type: chip_type.site
     },
     {
         text: "Linkedin",
+        slug: "linkedin",
         type: chip_type.site
     },
     {
         text: "Eventbrite",
+        slug: "eventbrite",
         type: chip_type.site
     },
     {
         text: "Google",
+        slug: "google",
         type: chip_type.site
     },
     {
         text: "Amazon",
+        slug: "amazon",
         type: chip_type.site
     },
 ]
@@ -41,10 +47,12 @@ export const filterByCategory = [
     {
         text: "SEO",
         type: chip_type.category,
+        slug: "seo"
     },
     {
         text: "Competitive Intelligence",
-        type: chip_type.category
+        type: chip_type.category,
+        slug: "competitive-intelligence"
     },
 ]
 
@@ -53,13 +61,15 @@ export const default_chips = [
         text: "Extract Data",
         type: chip_type.textOnly,
         icon: <TfiExchangeVertical />,
-        search: "extract"
+        slug: "scrape",
+        selected: false
     },
     { 
         text: "Monitoring",
         type: chip_type.textOnly,
         icon: <PiMonitorBold />,
-        search: "monitor"
+        slug: "monitor",
+        selected: false
     },
     {
         text: "Filter by Site",
