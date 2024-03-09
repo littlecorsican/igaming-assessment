@@ -4,7 +4,7 @@ import TextOnlyChip from './TextOnlyChip'
 import SingleFilterChip from './SingleFilterChip'
 import MultiFilterChip from './MultiFilterChip'
 import { chip_type, filterBySite, filterByCategory } from '../constant'
-import styles from '../styles/Bar.module.css'
+import barStyles from '../styles/Bar.module.css'
 
 function Bar(props) {
 
@@ -29,14 +29,13 @@ function Bar(props) {
   }
 
   return (
-    <div className="flex flex-row py-4 min-w-[400px]">
+    <div className={barStyles.bar}>
       {
         chips.length > 0 && chips.map((value)=>{
           if (value.type === chip_type.textOnly) {
             return <TextOnlyChip
               key={value.text}
               {...value}
-              //selected={selectedChips.find((value2)=>value.text === value2.text).selected}
             />
           } else if (value.type === chip_type.singleFilter) {
             return <SingleFilterChip

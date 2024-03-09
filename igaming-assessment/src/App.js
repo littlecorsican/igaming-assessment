@@ -4,6 +4,7 @@ import Card from './components/Card'
 import Bar from './components/Bar'
 import { chips } from './constant'
 import data from './Assessment_1_2.json'
+import appStyles from'./styles/App.module.css'
 
 function App() {
   console.log("data", data, data.data)
@@ -22,16 +23,16 @@ function App() {
   },[cards])
 
   return (
-    <div className="App">
-      <div className='flex justify-between'>
-        <div className=''>
+    <div className={appStyles.main}>
+      <div className={appStyles.top}>
+        <div>
           Here are some Automations that pre-defined for product availability monitoring
         </div>
         <div className='text-indigo-800'>
           See all
         </div>
       </div>
-      <div className="w-full">
+      <div className={appStyles.bar}>
         <Bar chips={chips} />
       </div>
       <div className="w-full text-left">
