@@ -22,11 +22,11 @@
 }
 
 .image {
-    width: 60px;
-    height: 60px;
-    padding: 8px;
-    border: 1px solid #FCF5FF;
-    border-radius: 4px;
+  width: 60px;
+  height: 60px;
+  padding: 8px;
+  border: 1px solid #FCF5FF;
+  border-radius: 4px;
 }
 
 @keyframes enlarge {

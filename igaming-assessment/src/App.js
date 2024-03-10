@@ -104,7 +104,7 @@ function App() {
           <IoIosArrowDropright />
         </div>}
       </div>
-      <div className="w-full text-left">
+      <div className={appStyles.cards}>
         {
           cards.length > 0 && cards.map((value)=>{
             return <Card 
