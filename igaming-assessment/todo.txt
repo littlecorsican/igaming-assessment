@@ -1,7 +1,6 @@
 TO DO 
 
 - add debounce on input
-- css variable
 - add unit test
 - add automation test
 
@@ -14,3 +13,4 @@ DONE
 - add outer div with padding - done
 - add images - partially
 - add animation 
+- - css variable
