@@ -10,6 +10,7 @@ import { checkIfOverflow } from './utils/helper'
 import { IoIosArrowDropleft } from "react-icons/io";
 import { IoIosArrowDropright } from "react-icons/io";
 import chipStyles from'./styles/Chips.module.css'
+import Cards from './components/Cards'
 
 function App() {
   const barRef = useRef()
@@ -90,7 +91,6 @@ function App() {
 
   return (
     <div className={appStyles.main} >
-      <button onClick={()=>console.log(chips)}>clcik</button>
       <div className={appStyles.top}>
         <div>
           Here are some Automations that pre-defined for product availability monitoring
@@ -115,16 +115,7 @@ function App() {
           <IoIosArrowDropright />
         </div>}
       </div>
-      <div className={appStyles.cards}>
-        {
-          cards.length > 0 && cards.map((value)=>{
-            return <Card 
-              key={value.id}
-              {...value}
-            />
-          })
-        }
-      </div>
+      <Cards data={cards} />
     </div>
   );
 }
