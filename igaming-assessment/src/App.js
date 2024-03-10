@@ -49,18 +49,28 @@ function App() {
   }
 
   useEffect(()=>{
+    let textOnlyFilter= false
+    let categoryFilter = false
+    let siteFilter = false
     const newCards = data.data.oneClickAutomations.items.filter((card_value) => {
       for(let i=0; i < chips.length; i++) {
         if (chips[i]?.type === chip_type.category && card_value?.categories.find((category)=>category?.slug === chips[i].slug)) {
+          categoryFilter = true
           return card_value
         } else if (chips[i]?.type === chip_type.site && card_value?.sites.find((site)=>site?.slug === chips[i].slug)) {
+          siteFilter = true
           return card_value
         } else if (chips[i]?.type === chip_type.textOnly && chips[i]?.selected && card_value?.slug.indexOf(chips[i]?.slug) > -1) {
+          textOnlyFilter = true
           return card_value
         }
       }
     });
-    setCards(newCards)
+    if (!textOnlyFilter && !categoryFilter && !siteFilter) { // if no filter is set, show all
+      seeAll()
+    } else {
+      setCards(newCards)
+    }
     toggleDirectionalButton()
   },[chips])
 
@@ -80,6 +90,7 @@ function App() {
 
   return (
     <div className={appStyles.main} >
+      <button onClick={()=>console.log(chips)}>clcik</button>
       <div className={appStyles.top}>
         <div>
           Here are some Automations that pre-defined for product availability monitoring
