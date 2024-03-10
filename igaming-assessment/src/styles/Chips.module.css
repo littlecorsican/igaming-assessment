@@ -29,3 +29,22 @@
     color: indigo;
     border: 1px solid indigo;
 }
+
+.directionalBtn {
+    font-size: 3rem;
+    cursor: pointer;
+    font-weight: 100;
+    color: gray;
+    padding-top: 1rem;
+    position: absolute;
+    background: transparent;
+    z-index: 3;
+}
+
+.directionalBtn.left {
+    left: 1rem;
+}
+
+.directionalBtn.right {
+    right: 1rem;
+}

@@ -9,12 +9,17 @@
     overflow: hidden;
     text-overflow: ellipsis;
     border: 1px solid #FCF5FF;
-    animation: .6s zoom-in;
+}
+
+.card:active {
+  animation: .6s zoom-in;
+  animation-iteration-count: 1
 }
 
 .card:hover {
-    animation: enlarge 1s 1 linear;
-    animation-fill-mode: forwards
+    animation: enlarge 1s;
+    animation-fill-mode: forwards;
+    /* animation-direction: reverse; */
 }
 
 .image {
@@ -27,7 +32,6 @@
 
 @keyframes enlarge {
     0%    {transform: scale(1,1);}
-    50%   {transform: scale(1.2, 1.2);}
     100%  {transform: scale(1.3, 1.3);}
 }
 

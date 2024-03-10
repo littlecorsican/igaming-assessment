@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import './App.css';
 import Card from './components/Card'
 import Bar from './components/Bar'
@@ -6,10 +6,16 @@ import { default_chips } from './constant'
 import data from './Assessment_1_2.json'
 import appStyles from'./styles/App.module.css'
 import { chip_type } from './constant'
+import { checkIfOverflow } from './utils/helper'
+import { IoIosArrowDropleft } from "react-icons/io";
+import { IoIosArrowDropright } from "react-icons/io";
+import chipStyles from'./styles/Chips.module.css'
 
 function App() {
+  const barRef = useRef()
   const [chips, setChips] = useState(default_chips)
   const [cards, setCards] = useState([...data.data.oneClickAutomations.items])
+  const [overflow, setOverflow] = useState(false)
 
   const addItemToBar=(item, singleSelect=false)=>{
     //if already pushed, exit
@@ -43,6 +49,7 @@ function App() {
   }
 
   useEffect(()=>{
+    toggleDirectionalButton()
     const newCards = data.data.oneClickAutomations.items.filter((card_value) => {
       for(let i=0; i < chips.length; i++) {
         if (chips[i]?.type === chip_type.category && card_value?.categories.find((category)=>category?.slug === chips[i].slug)) {
@@ -57,8 +64,31 @@ function App() {
     setCards(newCards)
   },[chips])
 
+  const test=()=>{
+    console.log(window.innerWidth)
+    console.log(window.clientWidth)
+    console.log(document.getElementById("bar").scrollWidth)
+    console.log(document.getElementById("bar").scrollLeft)
+    // console.log("info", info)
+  }
+
+  const toggleDirectionalButton=()=>{
+    setOverflow(checkIfOverflow(barRef?.current?.scrollWidth, window.innerWidth))
+  }
+
+  window.addEventListener("resize", toggleDirectionalButton)
+
+  const scrollLeft=()=>{
+    barRef.current.scrollLeft -= 100
+  }
+
+  const scrollRight=()=>{
+    barRef.current.scrollLeft += 100
+  }
+
   return (
-    <div className={appStyles.main}>
+    <div className={appStyles.main} >
+      <button onClick={test}>click</button>
       <div className={appStyles.top}>
         <div>
           Here are some Automations that pre-defined for product availability monitoring
@@ -67,13 +97,21 @@ function App() {
           See all
         </div>
       </div>
-      <div className={appStyles.bar}>
+      <div className={appStyles.bar} id="outer-div">
+        {overflow && <div className={`${chipStyles.directionalBtn} ${chipStyles.left}`} onClick={scrollLeft}>
+          <IoIosArrowDropleft />
+        </div>}
         <Bar 
           chips={chips}
           updateSelected={updateSelected}
           addItemToBar={addItemToBar}
           removeChip={removeChip}
+          ref={barRef}
+          overflow={overflow}
         />
+        {overflow && <div className={`${chipStyles.directionalBtn} ${chipStyles.right}`} onClick={scrollRight}>
+          <IoIosArrowDropright />
+        </div>}
       </div>
       <div className="w-full text-left">
         {

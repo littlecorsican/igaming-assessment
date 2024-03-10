@@ -1,3 +1,12 @@
+# Step and step set up
+
+run the following commands
+
+1) npm install
+2) npm start
+3) goto localhost:3000 in your browser
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

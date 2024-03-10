@@ -3,6 +3,17 @@
     flex-direction: row;
     padding-top: 1rem;
     padding-bottom: 2rem;
+    width: 100%;
+    overflow:auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.bar::-webkit-scrollbar {
+    display: none;
 }
 
 @media only screen and (max-width: 700px) {

@@ -2,16 +2,6 @@ import chipStyles from'../styles/Chips.module.css'
 
 function TextOnlyChip({ text, icon, selected, updateSelected }) {
 
-    // const [selected, setSelected] = useState(false)
-
-    // const handleClick=()=>{
-    //     setSelected((selected)=>!selected)
-    // }
-
-    // useEffect(()=>{
-    //     updateSelected(selected)
-    // },[selected])
-
     const DynamicIcon=()=>{
         return icon
     }

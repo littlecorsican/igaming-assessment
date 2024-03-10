@@ -4,11 +4,12 @@ import MultiFilterChip from './MultiFilterChip'
 import RemovableChip from './RemovableChip'
 import { chip_type } from '../constant'
 import barStyles from '../styles/Bar.module.css'
+import { forwardRef, useEffect } from 'react'
 
-function Bar({ chips, addItemToBar, removeChip, updateSelected }) {
+const Bar = forwardRef(function ({ chips, addItemToBar, removeChip, updateSelected }, ref) {
 
   return (
-    <div className={barStyles.bar}>
+    <div className={barStyles.bar} id="bar" ref={ref}>
       {
         chips.length > 0 && chips.map((value)=>{
           if (value.type === chip_type.textOnly) {
@@ -46,8 +47,7 @@ function Bar({ chips, addItemToBar, removeChip, updateSelected }) {
         })
       }
     </div>
-    );
-  }
-  
-  export default Bar;
-  
+  );
+})
+
+export default Bar
