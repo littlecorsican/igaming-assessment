@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './App.css';
 import Card from './components/Card'
 import Bar from './components/Bar'
@@ -64,14 +64,6 @@ function App() {
     setCards(newCards)
   },[chips])
 
-  const test=()=>{
-    console.log(window.innerWidth)
-    console.log(window.clientWidth)
-    console.log(document.getElementById("bar").scrollWidth)
-    console.log(document.getElementById("bar").scrollLeft)
-    // console.log("info", info)
-  }
-
   const toggleDirectionalButton=()=>{
     setOverflow(checkIfOverflow(barRef?.current?.scrollWidth, window.innerWidth))
   }
@@ -88,7 +80,6 @@ function App() {
 
   return (
     <div className={appStyles.main} >
-      <button onClick={test}>click</button>
       <div className={appStyles.top}>
         <div>
           Here are some Automations that pre-defined for product availability monitoring
