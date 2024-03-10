@@ -49,7 +49,6 @@ function App() {
   }
 
   useEffect(()=>{
-    toggleDirectionalButton()
     const newCards = data.data.oneClickAutomations.items.filter((card_value) => {
       for(let i=0; i < chips.length; i++) {
         if (chips[i]?.type === chip_type.category && card_value?.categories.find((category)=>category?.slug === chips[i].slug)) {
@@ -62,6 +61,7 @@ function App() {
       }
     });
     setCards(newCards)
+    toggleDirectionalButton()
   },[chips])
 
   const toggleDirectionalButton=()=>{
