@@ -15,26 +15,26 @@
     border-radius: 25px;
     margin: 0.3rem 0.5rem;
     padding: 0.3rem 0.5rem;
-    border: 1px solid gray;
-    color: gray;
+    border: 1px solid var(--primaryFont);
+    color:  var(--primaryFont);
 }
 
 .selected {
-    color: indigo;
-    border: 1px solid indigo;
+    color: var(--outlineColor);
+    border: 1px solid var(--outlineColor);
     background-color: #FCF5FF
 }
 
 .chipBtn:hover {
-    color: indigo;
-    border: 1px solid indigo;
+    color: var(--outlineColor);
+    border: 1px solid var(--outlineColor);
 }
 
 .directionalBtn {
     font-size: 3rem;
     cursor: pointer;
     font-weight: 100;
-    color: gray;
+    color: var(--primaryFont);
     padding-top: 1rem;
     position: absolute;
     background: transparent;
