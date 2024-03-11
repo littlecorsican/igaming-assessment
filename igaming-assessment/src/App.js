@@ -55,13 +55,16 @@ function App() {
     let siteFilter = false
     const newCards = data.data.oneClickAutomations.items.filter((card_value) => {
       for(let i=0; i < chips.length; i++) {
-        if (chips[i]?.type === chip_type.category && card_value?.categories.find((category)=>category?.slug === chips[i].slug)) {
+        if (chips[i]?.type === chip_type.category && 
+          card_value?.categories.find((category)=>category?.slug === chips[i].slug)) {
           categoryFilter = true
           return card_value
-        } else if (chips[i]?.type === chip_type.site && card_value?.sites.find((site)=>site?.slug === chips[i].slug)) {
+        } else if (chips[i]?.type === chip_type.site && 
+          card_value?.sites.find((site)=>site?.slug === chips[i].slug)) {
           siteFilter = true
           return card_value
-        } else if (chips[i]?.type === chip_type.textOnly && chips[i]?.selected && card_value?.slug.indexOf(chips[i]?.slug) > -1) {
+        } else if (chips[i]?.type === chip_type.textOnly && 
+          chips[i]?.selected && card_value?.slug.indexOf(chips[i]?.slug) > -1) {
           textOnlyFilter = true
           return card_value
         }
